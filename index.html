@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Marcus Jones</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="import" href="resumeModal.js" />
+    <a href="./resume/resume.pdf" target="_blank">View Resume</a>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Marcus Jones Portfolio</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="#software-engineering-skills"
+              >Software Engineering Skills</a
+            >
+          </li>
+          <li>
+            <a href="#technical-management-skills"
+              >Technical Management Skills</a
+            >
+          </li>
+          <li><a href="#photography-skills">Photography Skills</a></li>
+          <li>
+            <a href="#cross-functional-skills">Cross-Functional Skills</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="software-engineering-skills">
+      <h2>Software Engineering Skills</h2>
+      <p>Code example demonstrating proficiency in Python:</p>
+      <pre><code>
+        def factorial(n):
+            if n == 0:
+                return 1
+            else:
+                return n * factorial(n-1)
+      </code></pre>
+      <p>
+        This code calculates the factorial of a given number using recursion.
+      </p>
+    </section>
+
+    <section id="technical-management-skills">
+      <h2>Technical Management Skills</h2>
+      <p>Code example demonstrating management of a technical project:</p>
+      <pre><code>
+        <ul>
+          <li>Create project plan</li>
+          <li>Assign tasks to team members</li>
+          <li>Hold regular status meetings</li>
+          <li>Track progress and adjust plan as needed</li>
+        </ul>
+      </code></pre>
+      <p>
+        This code shows an outline of a project plan and management process for
+        a hypothetical technical project.
+      </p>
+    </section>
+
+    <section id="photography-skills">
+      <h2>Photography Skills</h2>
+      <p>Code example of photo editing in Adobe Photoshop:</p>
+      <!-- Modal Gallery -->
+      <div class="container-fluid">
+        <div
+          id="photography-carousel"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li
+              data-target="#photography-carousel"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#photography-carousel" data-slide-to="1"></li>
+            <li data-target="#photography-carousel" data-slide-to="2"></li>
+            <li data-target="#photography-carousel" data-slide-to="3"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="path/to/image1.jpg" alt="Image 1" />
+            </div>
+            <div class="item">
+              <img src="path/to/image2.jpg" alt="Image 2" />
+            </div>
+            <div class="item">
+              <img src="path/to/image3.jpg" alt="Image 3" />
+            </div>
+            <div class="item">
+              <img src="path/to/image4.jpg" alt="Image 4" />
+            </div>
+            <div class="item hidden">
+              <img src="path/to/image5.jpg" alt="Image 5" />
+            </div>
+            <div class="item hidden">
+              <img src="path/to/image6.jpg" alt="Image 6" />
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <a
+            class="left carousel-control"
+            href="#photography-carousel"
+            data-slide="prev"
+          >
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a
+            class="right carousel-control"
+            href="#photography-carousel"
+            data-slide="next"
+          >
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+
+          <!-- Show/hide additional images button -->
+          <button id="show-more-photos" type="button" class="btn btn-default">
+            Show More Photos
+          </button>
+        </div>
+      </div>
+      <pre><code>
+        <ul>
+          <li>Adjust brightness and contrast</li>
+          <li>Remove blemishes using the spot healing brush</li>
+          <li>Apply a vintage filter using the Curves adjustment layer</li>
+        </ul>
+      </code></pre>
+      <p>
+        This code shows a step-by-step guide to editing a sample photo using
+        Adobe Photoshop.
+      </p>
+    </section>
+
+    <section id="cross-functional-skills">
+      <h2>Cross-Functional Skills</h2>
+      <p>
+        Code example demonstrating a combination of software engineering,
+        technical management, and photography skills:
+      </p>
+      <pre><code>
+        // Create a photo-sharing app with advanced image processing features
+        const app = new PhotoSharingApp();
+        app.enableFilters();
+        app.enableSocialSharing();
+        app.enableGroupAlbums();
+        app.enableCollaboration();
+      </code></pre>
+      <p>
+        This code shows a hypothetical implementation of a photo-sharing app
+        that integrates advanced image processing features, social sharing,
+        group albums, and collaboration functionality.
+      </p>
+    </section>
+
+    <footer>
+      <p>Contact: marcus.jones84@gmail.com</p>
+      <div class="loading">
+        <div class="loader"></div>
+        <p id="loading">
+          Loading<span class="dot">.</span><span class="dot">.</span
+          ><span class="dot">.</span>
+        </p>
+      </div>
+      <p class="typing-animation">Typing intro animation</p>
+    </footer>
+
+    <!-- Resume Modal -->
+    <div id="resume-modal" class="res-modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <embed
+          src="resume.pdf"
+          type="application/pdf"
+          width="100%"
+          height="500px"
+        />
+      </div>
+    </div>
+
+    <script>
+      const modal = document.querySelector("#modal");
+      const images = document.querySelectorAll(".gallery-image");
+      const prevButton = document.querySelector(".modal-prev");
+      const nextButton = document.querySelector(".modal-next");
+      let currentImageIndex = 0;
+
+      // Function to display modal
+      function showModal() {
+        modal.style.display = "block";
+      }
+
+      // Function to hide modal
+      function hideModal() {
+        modal.style.display = "none";
+      }
+
+      // Function to update the modal content
+      function updateModalContent() {
+        const modalContent = modal.querySelector(".modal-content");
+        modalContent.innerHTML = ""; // Clear existing content
+        const currentImage = images[currentImageIndex];
+        const newImage = document.createElement("img");
+        newImage.src = currentImage.src;
+        newImage.alt = currentImage.alt;
+        newImage.classList.add("modal-image");
+        modalContent.appendChild(newImage);
+      }
+
+      // Function to show previous image
+      function showPrevImage() {
+        currentImageIndex--;
+        if (currentImageIndex < 0) {
+          currentImageIndex = images.length - 1;
+        }
+        updateModalContent();
+      }
+
+      // Function to show next image
+      function showNextImage() {
+        currentImageIndex++;
+        if (currentImageIndex >= images.length) {
+          currentImageIndex = 0;
+        }
+        updateModalContent();
+      }
+
+      $(function () {
+        // Hide additional images by default
+        $("#photography-carousel .item.hidden").hide();
+
+        // Show/hide additional images on button click
+        $("#show-more-photos").click(function () {
+          $("#photography-carousel .item.hidden").toggle();
+          if ($(this).text() === "Show More Photos") {
+            $(this).text("Hide Additional Photos");
+          } else {
+            $(this).text("Show More Photos");
+          }
+        });
+      });
+
+      // Event listeners for opening and closing the modal
+      images.forEach((image) => {
+        image.addEventListener("click", () => {
+          currentImageIndex = Array.from(images).indexOf(image);
+          updateModalContent();
+          showModal();
+        });
+      });
+
+      modal.addEventListener("click", (event) => {
+        if (
+          event.target === modal ||
+          event.target.classList.contains("modal-close")
+        ) {
+          hideModal();
+        }
+      });
+
+      // Event listeners for navigating through images
+      prevButton.addEventListener("click", showPrevImage);
+      nextButton.addEventListener("click", showNextImage);
+    </script>
+  </body>
+</html>
