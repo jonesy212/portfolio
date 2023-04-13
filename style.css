@@ -438,6 +438,8 @@ li:before {
 .adobe-example-list {
   display: flex;
   flex-direction: row;
+  flex-wrap:wrap;
+  margin-bottom: 3rem;
 }
 
 .adobe-example-link {
