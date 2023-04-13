@@ -5,184 +5,197 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="import" href="resumeModal.js" />
-    <a href="./resume/resume.pdf" target="_blank">View Resume</a>
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- JavaScript -->
+    <script src="loadIntro.js"></script>
+    <script src="main.js"></script>
+    <script src="resumeModal.js"></script>
 
-    <title>Document</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <header>
-      <h1>Marcus Jones Portfolio</h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="#software-engineering-skills"
-              >Software Engineering Skills</a
-            >
-          </li>
-          <li>
-            <a href="#technical-management-skills"
-              >Technical Management Skills</a
-            >
-          </li>
-          <li><a href="#photography-skills">Photography Skills</a></li>
-          <li>
-            <a href="#cross-functional-skills">Cross-Functional Skills</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <section id="software-engineering-skills">
-      <h2>Software Engineering Skills</h2>
-      <p>Code example demonstrating proficiency in Python:</p>
-      <pre><code>
-        def factorial(n):
-            if n == 0:
-                return 1
-            else:
-                return n * factorial(n-1)
-      </code></pre>
-      <p>
-        This code calculates the factorial of a given number using recursion.
-      </p>
-    </section>
-
-    <section id="technical-management-skills">
-      <h2>Technical Management Skills</h2>
-      <p>Code example demonstrating management of a technical project:</p>
-      <pre><code>
-        <ul>
-          <li>Create project plan</li>
-          <li>Assign tasks to team members</li>
-          <li>Hold regular status meetings</li>
-          <li>Track progress and adjust plan as needed</li>
-        </ul>
-      </code></pre>
-      <p>
-        This code shows an outline of a project plan and management process for
-        a hypothetical technical project.
-      </p>
-    </section>
-
-    <section id="photography-skills">
-      <h2>Photography Skills</h2>
-      <p>Code example of photo editing in Adobe Photoshop:</p>
-      <!-- Modal Gallery -->
-      <div class="container-fluid">
-        <div
-          id="photography-carousel"
-          class="carousel slide"
-          data-ride="carousel"
-        >
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li
-              data-target="#photography-carousel"
-              data-slide-to="0"
-              class="active"
-            ></li>
-            <li data-target="#photography-carousel" data-slide-to="1"></li>
-            <li data-target="#photography-carousel" data-slide-to="2"></li>
-            <li data-target="#photography-carousel" data-slide-to="3"></li>
-          </ol>
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="path/to/image1.jpg" alt="Image 1" />
-            </div>
-            <div class="item">
-              <img src="path/to/image2.jpg" alt="Image 2" />
-            </div>
-            <div class="item">
-              <img src="path/to/image3.jpg" alt="Image 3" />
-            </div>
-            <div class="item">
-              <img src="path/to/image4.jpg" alt="Image 4" />
-            </div>
-            <div class="item hidden">
-              <img src="path/to/image5.jpg" alt="Image 5" />
-            </div>
-            <div class="item hidden">
-              <img src="path/to/image6.jpg" alt="Image 6" />
-            </div>
-          </div>
-
-          <!-- Controls -->
-          <a
-            class="left carousel-control"
-            href="#photography-carousel"
-            data-slide="prev"
-          >
-            <span class="glyphicon glyphicon-chevron-left"></span>
-          </a>
-          <a
-            class="right carousel-control"
-            href="#photography-carousel"
-            data-slide="next"
-          >
-            <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
-
-          <!-- Show/hide additional images button -->
-          <button id="show-more-photos" type="button" class="btn btn-default">
-            Show More Photos
-          </button>
+    <div class="loading">
+      <div class="loader">
+        <div class="circle">
+          <div class="spinner particle"></div>
         </div>
+        <div class="highlight"></div>
       </div>
-      <pre><code>
+      <p id="loading">Loading</p>
+
+      <div class="creative">
+        <span id="creative-text">Your Next Creative</span>
+      </div>
+    </div>
+
+    <div class="main-content" id="main-content">
+      <header class="sticky-header">
+        <h1>Marcus Jones Portfolio</h1>
+        <nav class=>
+          <ul class="header-nav-list">
+            <li class= "header-nav-item">
+              <a class="header-nav-link" href="./images/Marcus Jones Resume 2023.pdf" target="_blank" target="_blank"
+                >View Resume</a
+              >
+            </li>
+            <li class= "header-nav-item">
+              <a class="header-nav-link" href="#about-me">About Me</a>
+            </li>
+            <li class= "header-nav-item">
+              <a class="header-nav-link" href="#software-engineering-skills"
+                >Software Engineering Skills</a
+              >
+            </li>
+            <li class= "header-nav-item">
+              <a class="header-nav-link" href="#technical-management-skills"
+                >Technical Management Skills</a
+              >
+            </li>
+            <li class= "header-nav-item"><a class="header-nav-link" href="#photography-skills">Photography Skills</a></li>
+            <li>  
+              <a class="header-nav-link" href="#hobbies">Hobbies</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <section id="examples">
+        <h2 class="example-heading">Work Examples</h2>
         <ul>
-          <li>Adjust brightness and contrast</li>
-          <li>Remove blemishes using the spot healing brush</li>
-          <li>Apply a vintage filter using the Curves adjustment layer</li>
+          <div id="video-examples">
+            <li>
+              <div class="example-title">Video Presentation: </div>
+              <li class="example-link"> 
+                <a href="https://drive.google.com/file/d/12rP-K98LS7O7EA92WwF3vAAWz10e-UQF/view?usp=share_link" target="_blank"><strong>Alpaca Vids Presentation</strong></a>
+              </li>
+            </li>
+          </div>
+          <div id="website-examples">
+            <li>
+              <div class="example-title">Websites: </div>
+              <li class="example-link"> 
+                <a href="https://boldmov-development-frontend.vercel.app/" target="_blank"><strong> BoldMov</strong><span><a href="https://github.com/jonesy212/boldmov-development-frontend" target="_blank"> | <strong>Github</strong></a></span></a>
+              </li>
+              <li class="example-link"> 
+                <a href="https://front-saas-website.vercel.app/" target="_blank"> <strong> SaaS</strong></a>
+              </li>
+              <li class="example-link"> 
+                <a href="https://footloose-pi.vercel.app" target="_blank"> <strong> .Sneakers</strong></a>
+              </li>
+            </li>
+          </div>
+          <div id="figma-examples">
+            <li>
+              <div class="example-title">Figma: </div>
+              <li id="figma-example-link"> 
+                <a href="https://www.figma.com/file/NQrLEcmh4uydX3vtZGN00p/PrayerNet-App?node-id=1%3A2&t=M5ONkCRC4VcCyso7-1" target="_blank"><strong> Prayernet</strong> | <span><a href="https://drive.google.com/file/d/1vAAbyMLaJ6ALsGZQYzgf_GtX9PQy7twR/view?usp=share_link"><strong>Prototype Video</strong></a></span></a>
+              </li>
+            </li>
+          </div>
         </ul>
-      </code></pre>
-      <p>
-        This code shows a step-by-step guide to editing a sample photo using
-        Adobe Photoshop.
-      </p>
-    </section>
+      </section>
+      <section id="about-me">
+        <h2>Bio</h2>
+        <div id="bio-paragraph">
+        <p >Marcus Jones is a highly skilled individual who possesses a diverse 
+          range of talents, enabling him to effectively assist and consult 
+          businesses in any capacity. With a background in the arts, Marcus has a 
+          keen eye for detail, ensuring that any visual products meet the highest 
+          standards of quality. Moreover, his expertise in branding and marketing 
+          allows him to delve deeper into the psychology of customer needs and wants, 
+          ensuring that any products or services meet those requirements effectively.</p>
 
-    <section id="cross-functional-skills">
-      <h2>Cross-Functional Skills</h2>
-      <p>
-        Code example demonstrating a combination of software engineering,
-        technical management, and photography skills:
-      </p>
-      <pre><code>
-        // Create a photo-sharing app with advanced image processing features
-        const app = new PhotoSharingApp();
-        app.enableFilters();
-        app.enableSocialSharing();
-        app.enableGroupAlbums();
-        app.enableCollaboration();
-      </code></pre>
-      <p>
-        This code shows a hypothetical implementation of a photo-sharing app
-        that integrates advanced image processing features, social sharing,
-        group albums, and collaboration functionality.
-      </p>
-    </section>
+         <p> Marcus's knowledge and experience in software development place him in a rare 
+          and valuable category, enabling him to leverage his skills to achieve outstanding 
+          results. Furthermore, his love for people and his exceptional management skills 
+          allow him to combine all of his talents, making him a highly sought-after team player.</p>
+          
+          In summary, Marcus Jones is a uniquely gifted individual whose talents and skills 
+          make him an asset to any team. His well-rounded experiences and expertise in various 
+          fields enable him to offer a rare blend of skills that any business would be fortunate 
+          to have.</p>
+          
+          <em><strong>Engineering the life I was programmed to live</strong></em>
+        </div>
 
-    <footer>
-      <p>Contact: marcus.jones84@gmail.com</p>
-      <div class="loading">
-        <div class="loader"></div>
-        <p id="loading">
-          Loading<span class="dot">.</span><span class="dot">.</span
-          ><span class="dot">.</span>
-        </p>
-      </div>
-      <p class="typing-animation">Typing intro animation</p>
-    </footer>
+      </section>
+      <section id="software-engineering-skills">
+        <h2>Software Engineering Skills</h2>
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>
+            <strong>Frontend:</strong> CSS, Redux, Hooks, Storybook, Javascript,
+            React, Nextjs, Angular, React Native, SaSS/Less, Grid, Flexbox, Git, Webpack
+          </li>
+          <li>
+            <strong>Backend: </strong>Node, Nexus, Prisma, Express, Postgres, Docker,
+            Git CLI, Vercel, CASL(auth), GraphQL, Docker, JWT, REST, OAuth
+          </li>
+          <li>
+            <strong>Additional: </strong>Agile Project Management, Roadmap
+            Architect, Section Lead, Team Building, Team Lead, DevOps, Branding, Marketing
+          </li>
+        </ul>
+      </section>
 
+      <section id="technical-management-skills">
+        <h3>Technical Management Skills</h3>
+        <p>Code example demonstrating management of a technical project:</p>
+        <div id="management-skills">
+          <p id="mSkill"><strong>1. Team Management</strong>- Managed multiple teams of 8-12 students, including team leads, using Agile methodologies for organizing meetings, sprint planning, daily stand-ups, and retrospectives.</p>
+          <p id="mSkill"><strong>2. Communication Skills</strong>- Provide feedback to enhance collaboration and improve communication, and assist students with questions or concerns while developing lab projects.</p>
+          <p id="mSkill"><strong>3. Conflict Resolution </strong>- Mediate resolutions for internal team issues between students and team leads and conflicts between team members.</p>
+          <p id="mSkill"><strong>4. Resource Allocation </strong>- Redistribute resources where needed for team leads and students to ensure successful milestone completion.</p>
+          <p id="mSkill"><strong>5. Performance Evaluation </strong>- Track performance of students by assessing the ability to work in a team environment and provide recommendations on students who need to retake the course section.</p>
+          <p id="mSkill"><strong>6. Management Tools </strong>- Set up management tools such as Jira, Trello, and other DevOps tasks to enhance team performance.</p>
+          <p id="mSkill"><strong>7. Attendance Verification </strong>- Verify attendance for students and employees to ensure accountability and prevent time discrepancies.</p>
+          <p id="mSkill"><strong>8. Payroll Management </strong>- Complete payroll and verify team leading hours for accurate and timely compensation.</p>
+          <p id="mSkill"><strong>9. Training and Development</strong>- Train new section leads and team leads, lead welcome call meetings for new management, and prepare teams for lab presentations.</p>
+          <p id="mSkill"><strong>10. Project Management </strong>- Assist teams in research ideas, develop KPIs, outline tech stack scope, then prepare to build projects to meet set timeframes.</p>
+      </div id="management-skills">
+      </section>
+
+
+      <section id="hobbies">
+        <h3>Hobbies</h3>
+        <div>
+          <p>
+            Intros Developed with Adobe After Effects
+          </p>
+          <ul class="adobe-example-list">
+            <li class="adobe-example-link">
+              <div><strong>BEOS</strong></div>
+              <a href="https://drive.google.com/file/d/1y4JiyX23x6idX_5UeVzY0ryQrfAz0JjN/view?usp=sharing"></a>
+              <iframe src="https://drive.google.com/file/d/1y4JiyX23x6idX_5UeVzY0ryQrfAz0JjN/preview" width="330" height="240"></iframe>
+            </li>
+            <li class="adobe-example-link">
+              <div><strong>Trustee Investments</strong></div>
+              <a href="https://drive.google.com/file/d/1v75eTw2y43KVhP9qAwWO39xpQui-KkJg/view?usp=sharing"></a>
+              <iframe src="https://drive.google.com/file/d/1v75eTw2y43KVhP9qAwWO39xpQui-KkJg/preview" width="330" height="240"></iframe>
+            </li>
+          </ul>
+          
+        </div>
+       
+      </section>
+
+      <footer>
+        <p>Contact: marcus.jones84@gmail.com</p>
+
+        <div>Phone: 580-730-1598</div>
+        <!-- <p class="typing-animation">Typing intro animation</p> -->
+      </footer>
+    </div>
     <!-- Resume Modal -->
     <div id="resume-modal" class="res-modal">
       <div class="modal-content">
@@ -195,6 +208,14 @@
         />
       </div>
     </div>
+
+
+
+
+
+
+
+
 
     <script>
       const modal = document.querySelector("#modal");
@@ -243,20 +264,99 @@
         updateModalContent();
       }
 
-      $(function () {
-        // Hide additional images by default
-        $("#photography-carousel .item.hidden").hide();
+      $(document).ready(function () {
+        // hide creative text by default
+        $("#creative").css("display", "none");
 
-        // Show/hide additional images on button click
-        $("#show-more-photos").click(function () {
-          $("#photography-carousel .item.hidden").toggle();
-          if ($(this).text() === "Show More Photos") {
-            $(this).text("Hide Additional Photos");
-          } else {
-            $(this).text("Show More Photos");
-          }
-        });
+        // show loader for 4 seconds
+        setTimeout(function () {
+          $(".loading").addClass("hide");
+
+          // fade in main content
+          $(".main-content").addClass("show");
+
+          // fade in creative text after main content fades in
+          setTimeout(function () {
+            $("#creative")
+              .html("Your Next Creative")
+              .css("color", "black") // change text color to black
+              .addClass("typing fade-in")
+              .delay(1000)
+              .queue(function () {
+                $(this).removeClass("typing");
+                $("#creative").fadeOut(500, function () {
+                  $("body").css("overflow", "auto");
+                });
+                $(this).dequeue();
+              });
+          }, 500);
+        }, 7000);
       });
+
+      function fadeOut(el, callback) {
+  el.style.opacity = 1;
+
+  (function fade() {
+    if ((el.style.opacity -= 0.1) < 0) {
+      el.style.display = "none";
+      if (typeof callback === "function") callback();
+    } else {
+      requestAnimationFrame(fade);
+    }
+  })();
+}
+
+function fadeIn(el, callback) {
+  el.style.opacity = 0;
+  el.style.display = "block";
+  el.classList.add("fade-in");
+
+  (function fade() {
+    var val = parseFloat(el.style.opacity);
+    if (!((val += 0.1) > 1)) {
+      el.style.opacity = val;
+      requestAnimationFrame(fade);
+    } else {
+      el.classList.remove("fade-in");
+      el.classList.add("show");
+      if (typeof callback === "function") callback();
+    }
+  })();
+}
+
+window.addEventListener("load", function () {
+  //added to stop the screen from scrolling on load
+  if (window.location.hash) {
+    window.location.hash = "";
+  }
+
+  var loading = document.getElementById("loading");
+  var creative = document.querySelector(".creative");
+  var creativeText = document.getElementById("creative");
+  var isCreativeTextShown = false;
+
+  setTimeout(function () {
+    //fade out the loading element
+    fadeOut(loading);
+    //wait for the loading element to disappear before fading in the creative element
+    setTimeout(function () {
+      fadeIn(creative, function () {
+        // show creative text after main content fades in
+        if (!isCreativeTextShown) {
+          isCreativeTextShown = true;
+          creativeText.innerHTML = "Your Next Creative";
+          creativeText.style.color = "black";
+          creativeText.classList.add("typing", "fade-in");
+          setTimeout(function () {
+            creativeText.classList.remove("typing");
+            fadeOut(creativeText);
+          }, 1000);
+        }
+      });
+    }, 100);
+  }, 2000);
+});
+
 
       // Event listeners for opening and closing the modal
       images.forEach((image) => {
@@ -275,10 +375,58 @@
           hideModal();
         }
       });
-
       // Event listeners for navigating through images
       prevButton.addEventListener("click", showPrevImage);
       nextButton.addEventListener("click", showNextImage);
+
+      //sticky header that also is set up to change the background header and
+      //link colors
+      const header = document.querySelector('.sticky-header');
+      const headerHeight = header.offsetHeight;
+
+function toggleHeader() {
+  if (window.scrollY > headerHeight) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+}
+
+window.addEventListener('scroll', toggleHeader);
+
+
+
+
+
+
+
+
+
+
+// get all video elements on the page
+var videos = document.getElementsByTagName('video');
+
+// loop through each video element
+for (var i = 0; i < videos.length; i++) {
+  var video = videos[i];
+
+  // wait for the video metadata to load
+  video.addEventListener('loadedmetadata', function() {
+
+    // set the canvas dimensions to match the video dimensions
+    var canvas = document.createElement('canvas');
+    canvas.width = this.videoWidth;
+    canvas.height = this.videoHeight;
+
+    // draw the first frame of the video onto the canvas
+    var ctx = canvas.getContext('2d');
+    ctx.drawImage(this, 0, 0, canvas.width, canvas.height);
+
+    // set the canvas as the poster image for the video
+    this.setAttribute('poster', canvas.toDataURL());
+  });
+}
+
     </script>
   </body>
 </html>
