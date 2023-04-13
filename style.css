@@ -197,11 +197,12 @@ li:before {
   color: black;
 }
 
-.loading {
+#loading {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 40rem;
 }
 
 .loader {
@@ -209,6 +210,8 @@ li:before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 14rem;
+
 }
 
 .circle {
@@ -317,7 +320,7 @@ li:before {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  animation: fade-in-out 8s ease-in-out infinite;
+  animation: fade-in-out 4s ease-in-out infinite;
   /* Change duration from 1s to 2s */
 }
 
@@ -326,7 +329,7 @@ li:before {
   align-items: center;
   font-size: 24px;
   font-weight: bold;
-  animation: blink 4s infinite;
+  animation: blink 3s infinite;
   justify-content: center;
 }
 
@@ -384,9 +387,9 @@ li:before {
 .main-content.show {
   opacity: 1;
 }
-/* .example-heading{
-  margin-top: 7rem
-} */
+
+
+/*examples*/
 #example-list{
   margin-top: 4rem;
 }
@@ -394,7 +397,7 @@ li:before {
   z-index: 10;
 }
 .hide {
-  animation: fade-out 1s ease forwards;
+  animation: fade-out 2s ease forwards;
 }
 
 /* Loading Highlight */
@@ -450,6 +453,24 @@ li:before {
 #contact {
   margin-bottom: 0;
 }
+
+
+/* Recommendations*/
+.user-image{
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+
+
+
+
+
+
+
+
+
+
 /* Carousel */
 
 #photography-carousel .carousel-inner {
@@ -544,11 +565,7 @@ li:before {
   cursor: pointer;
 }
 
-/* Footer*/
-/* footer {
-  display: block;
-  padding-bottom: 3.5rem;
-} */
+
 
 #footer {
   display: flex;

@@ -32,10 +32,10 @@
         </div>
         <div class="highlight"></div>
       </div>
-      <p id="loading">Loading</p>
+      <p id="loading">Designing Your Perfect Candidate</p>
 
       <div class="creative">
-        <span id="creative-text">Your Next Creative</span>
+        <span id="creative-text"></span>
       </div>
     </div>
 
@@ -54,6 +54,9 @@
             </li>
             <li class= "header-nav-item">
               <a class="header-nav-link" href="#about-me">About Me</a>
+            </li>
+            <li class= "header-nav-item">
+              <a class="header-nav-link" href="#recommendations">Recommendations</a>
             </li>
             <li class= "header-nav-item">
               <a class="header-nav-link" href="#software-engineering-skills"
@@ -133,6 +136,64 @@
         </div>
 
       </section>
+      <section id="recommendations">
+        <h3 class="section-title">Recommendations</h3>
+        <ul>
+          <li>
+            <img class="user-image" src="./images/Bernie_Durfee.jpeg" alt="image of bernie"></img>
+            <div class="recommendation-name"><strong>Bernie Durfee</strong></div>
+            <div class="current-position"><strong>Director of Engineering</strong></div>
+            <div class="degree-of-separation"><em>June 23, 2020, Bernie managed Marcus directly</em></div>
+            <p>
+              Marcus was on my team as a Section Lead for the Lamdba School Labs program. 
+              The Labs program has hundreds of students working across dozens of teams on software 
+              projects at any given time. Section Leads manage a set of those teams to keep them moving forward.
+            </p>
+
+            <p>Labs is a highly complex, fast-moving and demanding environment. Section Leads report directly 
+              to an Engineering Manager and provide day-to-day support for teams as well as coordination between 
+              students and various parts of the Lambda School staff.
+            </p>
+            <p>
+            Marcus has done a fantastic job as a Section Lead.
+            </p>
+
+            <p>I can always depend on Marcus to provide a clear picture of how teams are doing. I can always trust 
+              Marcus to work with the teams to provide them guidance and insight.
+            </p>
+            
+            <p>Marcus has a particularly strong skill in understanding when to provide direct guidance 
+              and when to consult with others to find a way forward.  He ran teams that focused on everything 
+              from eCommerce to data science and never faltered in his ability to help them make their projects happen.
+            </p>
+
+            <p>Marcus is an asset to any team and I highly recommend him for any role!</p>
+          </li>
+          <li>
+            <img class="user-image" src="./images/david_Monson.jpeg" alt="image of david"></img>
+            <div class="recommendation-name"><strong>David Monson</strong></div>
+            <div class="current-position"><strong>Head Of Design at Instawork</strong></div>
+            <div class="degree-of-separation"><em>July 8, 2020, David worked with Marcus but on different teams</em></div>
+            <p>I worked with Marcus while he was section lead during Lambda Labs. 
+              He was a great team leader, was punctual, professional and very well organized. 
+              Marcus did a great job pushing each of the labs teams to the finish line and ensured they reached a successful outcome. 
+              He had to tackle many unforeseen roadblocks along the way and handled them very well.
+            </p>
+          </li>
+          <li>
+            <img class="user-image" src="./images/Katherine.jpeg" alt="image of katherine"></img>
+            <div class="recommendation-name"><strong>Katharine A. Holderfield</strong></div>
+            <div class="current-position"><strong>UX Designer at BLAZEUX Designer at BLAZE</strong></div>
+            <div class="degree-of-separation"><em>June 30, 2020, Katharine A. worked with Marcus on the same team</em></div>
+            <p>
+              I had the pleasure of working with Marcus during my time as a co-section lead at Lambda school. 
+              He was a welcoming and positive person right from day one, being very attentive and helpful as I learned my new role. 
+              He often guided our group of section leads through tasks we did not know how to do and did so with patience. 
+              He is a very intelligent person and any team would be lucky to have him!
+            </p>
+          </li>
+        </ul>
+      </section>
       <section id="software-engineering-skills"    >
         <h2>Software Engineering Skills</h2>
         <h3>Technical Skills</h3>
@@ -200,9 +261,10 @@
           </ul>
           
         </div>
-       
+       </section>
+    
+      
       </section>
-
       <footer id="footer">
         <p>Contact: Marcus Jones</p>
         <p>Email: marcus.jones84@gmail.com</p>
@@ -298,18 +360,18 @@
           // fade in creative text after main content fades in
           setTimeout(function () {
             $("#creative")
-              .html("Your Next Creative")
+              .html("Your Perfect Candidate")
               .css("color", "black") // change text color to black
               .addClass("typing fade-in")
-              .delay(1000)
+              .delay(200)
               .queue(function () {
                 $(this).removeClass("typing");
-                $("#creative").fadeOut(500, function () {
+                $("#creative").fadeOut(100, function () {
                   $("body").css("overflow", "auto");
                 });
                 $(this).dequeue();
               });
-          }, 500);
+          }, 1000);
         }, 7000);
       });
 
@@ -364,7 +426,7 @@ window.addEventListener("load", function () {
         // show creative text after main content fades in
         if (!isCreativeTextShown) {
           isCreativeTextShown = true;
-          creativeText.innerHTML = "Your Next Creative";
+          creativeText.innerHTML = "Your Perfect Candidate";
           creativeText.style.color = "black";
           creativeText.classList.add("typing", "fade-in");
           setTimeout(function () {
@@ -373,8 +435,8 @@ window.addEventListener("load", function () {
           }, 1000);
         }
       });
-    }, 100);
-  }, 2000);
+    }, 500);
+  }, 7000);
 });
 
 
