@@ -14,6 +14,7 @@ header {
   color: white;
   padding: 20px;
   text-align: center;
+  z-index:15
 }
 
 .sticky-header {
@@ -32,11 +33,21 @@ h1 {
 }
 
 section {
-  padding: 50px;
-  margin-bottom: 20px;
+  /* padding: 50px; */
+  padding-top: calc(10rem + 1px); /*add padding to the top of each section to match the height of the header*/
+  margin-bottom: -8rem;
   border: 1px solid #ddd;
+  border-top: none;
+  padding-left: 50px;
+  padding-right: 50px
 }
-
+#about-me,
+#software-engineering-skills,
+#technical-management-skills,
+#hobbies
+{
+  padding-bottom: 2rem
+}
 h2 {
   font-size: 28px;
   margin-top: 0;
@@ -111,6 +122,7 @@ ul {
   justify-content: center;
   margin: 0;
   padding: 0;
+  margin-bottom: none
 }
 
 .header-nav-list {
@@ -346,9 +358,9 @@ li:before {
 .main-content.show {
   opacity: 1;
 }
-.example-heading{
+/* .example-heading{
   margin-top: 7rem
-}
+} */
 #example-list{
   margin-top: 4rem;
 }
@@ -526,6 +538,31 @@ footer {
   width: 100%;
   height: 20px;
 }
+
+
+
+#scrollUp{
+  background-color:transparent;
+  background-image: linear-gradient(45deg, #c0c6cc 0%, #595a5d 100%);
+  color:white;
+  font-size: 20px;
+  border-radius: 1rem;
+  height: 1rem;
+  width: 3rem;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1rem;
+  z-index: 300;
+  text-align: center;
+}
+
+#scrollUp:hover{
+  background-image: linear-gradient(-45deg, #c0c6cc 100%, #595a5d 50%);
+}
+#scrollUp .fa-arrow-up{
+  vertical-align: -webkit-baseline-middle;
+}
+
 
 /* Media Queries */
 
