@@ -390,6 +390,9 @@ li:before {
 
 
 /*examples*/
+.example-heading{
+  text-align: center;
+}
 #example-list{
   margin-top: 4rem;
 }
@@ -460,8 +463,12 @@ li:before {
   border-radius: 50%;
   width: 5rem;
   height: 5rem;
+  margin-top: 2rem;
 }
 
+a.ref-linkedIn{
+  margin-bottom: 10rem
+}
 
 
 
