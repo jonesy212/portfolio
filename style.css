@@ -56,7 +56,7 @@ h1 {
 section {
   /* padding: 50px; */
   padding-top: calc(10rem + 1px); /*add padding to the top of each section to match the height of the header*/
-  margin-bottom: -8rem;
+  margin-bottom: -9rem;
   border: 1px solid #ddd;
   border-top: none;
   padding-left: 50px;
