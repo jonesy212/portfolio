@@ -465,6 +465,10 @@ li:before {
   height: 5rem;
   margin-top: 2rem;
 }
+.linked_logo{
+  margin-left: -1rem;
+
+}
 
 a.ref-linkedIn{
   margin-bottom: 10rem
