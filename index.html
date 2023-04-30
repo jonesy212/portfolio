@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/media.css" />
     <!-- JavaScript -->
     <script src="loadIntro.js"></script>
     <script src="main.js"></script>
@@ -31,51 +32,43 @@
           <div class="spinner particle"></div>
         </div>
         <div class="highlight"></div>
-      </div>
-      <p id="loading">Designing Your Perfect Candidate</p>
-
-      <div class="creative">
-        <span id="creative-text"></span>
+        <p id="loading">Designing 
+        </p>
+        <div class="creative">
+          <!-- <span id="creative-text"></span> -->
+        </div>
       </div>
     </div>
 
     <div class="main-content" id="main-content">
-      <header class="sticky-header">
-        <h1>Marcus Jones Portfolio</h1>
-        <nav class=>
-          <ul class="header-nav-list">
-            <li class= "header-nav-item">
-              <a class="header-nav-link resume" href="./images/Marcus Jones Resume 2023.pdf"  target="_blank">View Resume</a
-              >
+      <nav id="topNav" class="navbar nav">
+        <div class="container">
+          
+          <button class="nav-toggle-btn" aria-expanded="false" aria-controls="navbarDropdown">
+            <span>&#9776;</span>
+          </button>
+    
+          <a class="nav-brand" href="/index.html">BoldMov</a>    
+        
+          <ul class="nav-links">
+            <li class="nav-link">
+              <a href="#">Home</a>
             </li>
-            <li class= "header-nav-item">
-              <a class="header-nav-link" href="#examples">Examples</a>
+            <li class="nav-link">
+              <a href="#">Blog </a>
             </li>
-            <li class= "header-nav-item">
-              <a class="header-nav-link" href="#recommendations">Recommendations</a>
+            <li class="nav-link">
+              <a href="#">Portfolio</a>
             </li>
-            <li class= "header-nav-item">
-              <a class="header-nav-link" href="#software-engineering-skills"
-                >Software Engineering Skills</a
-                >
-              </li>
-              <li class= "header-nav-item">
-                <a class="header-nav-link" href="#technical-management-skills"
-                >Technical Management Skills</a
-                >
-              </li>
-              <li class= "header-nav-item">
-                <a class="header-nav-link" href="#about-me">About Me</a>
-              </li>
-            <!-- <li class= "header-nav-item"><a class="header-nav-link" href="#photography-skills">Photography Skills</a></li> -->
-            <li>  
-              <a class="header-nav-link" href="#hobbies">Hobbies</a>
+            <li class="nav-link">
+              <a href="#">Contact</a>
             </li>
           </ul>
-        </nav>
-      </header>
-<section id="disclaimer">Please review resume for detailed work history</section>
-      <section id="examples">
+    
+        </div>
+      </nav>
+  <section class="nav-section" id="disclaimer">Please review resume for detailed work history</section>
+      <section class="nav-section" id="examples">
         <h2 class="example-heading">Work Examples</h2>
         <ul>
           <div id="video-examples">
@@ -115,7 +108,7 @@
           </div>
         </ul>
       </section>
-      <section id="recommendations">
+      <section class="nav-section" id="recommendations">
         <h3 class="section-title">Recommendations</h3>
         <ul>
           <li>
@@ -175,7 +168,7 @@
           </li>
         </ul>
       </section>
-      <section id="software-engineering-skills"    >
+      <section class="nav-section" id="software-engineering-skills"    >
         <h2>Software Engineering Skills</h2>
         <h3>Technical Skills</h3>
         <ul>
@@ -194,7 +187,7 @@
         </ul>
       </section>
 
-      <section id="technical-management-skills">
+      <section class="nav-section" id="technical-management-skills">
         <h3>Technical Management Skills</h3>
         <p>Code example demonstrating management of a technical project:</p>
         <div id="management-skills">
@@ -214,7 +207,7 @@
           <p id="mSkill"><strong>14. Project Management </strong>- Assist teams in research ideas, develop KPIs, outline tech stack scope, then prepare to build projects to meet set timeframes.</p>
       </div id="management-skills">
       </section>
-      <section id="about-me">
+      <section class="nav-section" id="about-me">
         <h2>Bio</h2>
         <div id="bio-paragraph">
         <p >Marcus Jones is a highly skilled individual who possesses a diverse 
@@ -239,7 +232,7 @@
         </div>
 
       </section>
-      <section id="hobbies">
+      <section class="nav-section" id="hobbies">
         <h3>Hobbies</h3>
         <div>
           <p>
@@ -270,12 +263,11 @@
           
         </div>
        </section>
-    
-      
       </section>
+
       <footer id="footer">
         <p>Contact: Marcus Jones</p>
-        <p>Email: marcus.jones84@gmail.com</p>
+        <p>Email: marcus.a.jones84@gmail.com</p>
 
         <div>Phone: 580-730-1598</div>
         <!-- <p class="typing-animation">Typing intro animation</p> -->
@@ -308,6 +300,32 @@
 
 
     <script>
+
+
+//BUTTONS
+const nav = document.getElementById("topNav");
+    
+    window.onscroll = function (){
+  if (window.pageYOffset > 250){
+    nav.classList.add("sticky");
+  } else {
+    nav.classList.remove("sticky")
+  }
+ }
+  
+  const navButton = document.querySelector("button[aria-expanded]");
+  
+  function toggleNav({ target }){
+    console.log('click')
+    const expanded = target.getAttribute("aria-expanded") === 'true' || false;
+    navButton.setAttribute("aria-expanded", !expanded);
+    
+  }
+
+  navButton.addEventListener("click", toggleNav);
+
+
+  //MODALS
       const modal = document.querySelector("#modal");
       const images = document.querySelectorAll(".gallery-image");
       const prevButton = document.querySelector(".modal-prev");
@@ -354,98 +372,53 @@
         updateModalContent();
       }
 
-      $(document).ready(function () {
-        // hide creative text by default
-        $("#creative").css("display", "none");
+//ANIMATION
+// hide creative text by default
+const creative = document.querySelector('.creative');
+creative.style.display = 'none';
 
-        // show loader for 4 seconds
-        setTimeout(function () {
-          $(".loading").addClass("hide");
+// show loader initially
+const loading = document.getElementById('loading');
+loading.classList.remove('hide'); // remove hide class
 
-          // fade in main content
-          $(".main-content").addClass("show");
+// show circle initially
+const circle = document.querySelector('.circle')
+circle.classList.display = 'none'
 
-          // fade in creative text after main content fades in
-          setTimeout(function () {
-            $("#creative")
-              .html("Your Perfect Candidate")
-              .css("color", "black") // change text color to black
-              .addClass("typing fade-in")
-              .delay(200)
-              .queue(function () {
-                $(this).removeClass("typing");
-                $("#creative").fadeOut(100, function () {
-                  $("body").css("overflow", "auto");
-                });
-                $(this).dequeue();
-              });
-          }, 1000);
-        }, 7000);
-      });
+// show loader for 4 seconds
+setTimeout(() => {
+  loading.style.display = 'none'; // hide loader
+  circle.style.display = 'none'
+  
+  setTimeout(() => {
+    // fade in creative text after main content fades in
+   
+    creative.style.display = 'block';
+    creative.classList.remove('hide'); // remove hide class
+    creative.classList.add('typing', 'fade-in');
+    setTimeout(() => {
+      creative.innerHTML = 'Your Perfect Candidate';
+      creative.style.color = 'black'; // change text color to black
 
-      function fadeOut(el, callback) {
-  el.style.opacity = 1;
-
-  (function fade() {
-    if ((el.style.opacity -= 0.1) < 0) {
-      el.style.display = "none";
-      if (typeof callback === "function") callback();
-    } else {
-      requestAnimationFrame(fade);
-    }
-  })();
-}
-
-function fadeIn(el, callback) {
-  el.style.opacity = 0;
-  el.style.display = "block";
-  el.classList.add("fade-in");
-
-  (function fade() {
-    var val = parseFloat(el.style.opacity);
-    if (!((val += 0.1) > 1)) {
-      el.style.opacity = val;
-      requestAnimationFrame(fade);
-    } else {
-      el.classList.remove("fade-in");
-      el.classList.add("show");
-      if (typeof callback === "function") callback();
-    }
-  })();
-}
-
-window.addEventListener("load", function () {
-  //added to stop the screen from scrolling on load
-  if (window.location.hash) {
-    window.location.hash = "";
-  }
-
-  var loading = document.getElementById("loading");
-  var creative = document.querySelector(".creative");
-  var creativeText = document.getElementById("creative");
-  var isCreativeTextShown = false;
-
-  setTimeout(function () {
-    //fade out the loading element
-    fadeOut(loading);
-    //wait for the loading element to disappear before fading in the creative element
-    setTimeout(function () {
-      fadeIn(creative, function () {
-        // show creative text after main content fades in
-        if (!isCreativeTextShown) {
-          isCreativeTextShown = true;
-          creativeText.innerHTML = "Your Perfect Candidate";
-          creativeText.style.color = "black";
-          creativeText.classList.add("typing", "fade-in");
-          setTimeout(function () {
-            creativeText.classList.remove("typing");
-            fadeOut(creativeText);
-          }, 1000);
+      setTimeout(() => {
+        // fade in main content
+      const mainContent = document.querySelector('.main-content');
+      let isContentLoaded = false;
+      mainContent.classList.add('show');
+      creative.classList.add('hide');
+        if (!isContentLoaded) {
+          // Load resume content for main-content
+          const mainContent = document.getElementById("main-content");
+          const content = mainContent.innerHTML;
+          mainContent.innerHTML = content;
+          isContentLoaded = true;
+          mainContent.classList.add('show');
         }
-      });
-    }, 500);
-  }, 7000);
-});
+      }, 2000);
+    }, 600);
+  },500);
+}, 4000);
+
 
 
       // Event listeners for opening and closing the modal
@@ -525,6 +498,25 @@ window.addEventListener('load', function() {
   var sections = document.querySelectorAll('section');
   for (var i = 0; i < sections.length; i++) {
     sections[i].style.paddingTop = navHeight + 'px';
+  }
+});
+
+
+
+// Add an event listener to the window object that listens for the page to finish loading
+window.addEventListener('load', function() {
+  // When the page has finished loading, scroll to the top of the screen
+  window.scrollTo(0, 0);
+});
+
+//RELOAD
+
+// Add an event listener to the window object that listens for the user to scroll
+window.addEventListener('scroll', function() {
+  // When the user scrolls, check if they have scrolled down the page
+  if (window.pageYOffset > 0) {
+    // If they have scrolled down the page, refresh the page to bring them back to the top
+    location.reload();
   }
 });
 

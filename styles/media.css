@@ -1,0 +1,137 @@
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  [aria-controls="navbarDropdown"] {
+    /*display navbar button*/
+    display: block;
+    border: 1px solid black;
+  }
+  [aria-controls="navbarDropdown:active"] {
+    /*display navbar button*/
+    background-color: 1px solid rgb(128, 22, 22);
+  }
+
+  button.toggle-nav:active{
+    background-color: 1px solid rgb(128, 22, 22);
+
+  }
+
+  [aria-expanded="false"] ~ ul.nav-links {
+    /*when not expanded-list is hidden*/
+    display: none;
+  }
+
+  [aria-expanded="true"] ~ ul.nav-links {
+    /*when menu button is clicked/expanded- display*/
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.5)
+    );
+    width: 100%;
+    text-align: right;
+    box-shadow: 0 0 20px rgba(52, 49, 75, 0.1);
+  }
+
+  [aria-expanded="true"] ~ ul li a {
+    margin-right: 20px;
+    color: blue;
+  }
+
+  #header-name {
+    font-size: 1.5rem;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal-content {
+    grid-template-areas: "photo1 photo2" "photo3 photo4";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50% 50%;
+  }
+
+  .modal-content img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    padding-top: 7px;
+  }
+  nav a {
+    color: white;
+  }
+  nav a:active {
+    color: rgb(176, 85, 229);
+  }
+  .ul {
+    display: flex;
+    text-decoration: none;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul.nav-links {
+    flex-direction: column;
+    background-color: rgb(62, 8, 93);
+    border-radius: 20%;
+  }
+  .nav-link-item.resume {
+    background-color: rgb(104, 13, 157);
+    color: rgb(179, 179, 179);
+    border: none;
+    margin-bottom: 1rem;
+    padding: 10.5px 16px;
+    border-top-right-radius: 0.7rem;
+    border-top-left-radius: 0.7rem;
+  }
+  .nav-link-item.resume:hover {
+    border-radius: 1px solid rgb(104, 13, 157);
+  }
+  .nav-link-item.resume:active {
+    border: none;
+    color: white;
+    background-color: rgb(104, 13, 157);
+  }
+
+  .nav-link {
+    margin-top: 0.5rem;
+  }
+
+  #footer {
+    font-size: 0.6rem;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .modal-content {
+    grid-template-areas: "photo1 photo2 photo3" "photo4 photo4 photo4";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .modal-content {
+    grid-template-areas: "photo1 photo2 photo3 photo4";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100%;
+  }
+}
