@@ -589,6 +589,7 @@ ul.example-section{
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 3rem;
+  justify-content: center;
 }
 
 .adobe-example-link {
@@ -722,6 +723,7 @@ a.ref-linkedIn {
   left: 0;
   width: 100%;
   height: 3rem;
+  z-index: 100;
 }
 
 #scrollUp {
