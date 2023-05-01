@@ -27,11 +27,18 @@ ul.nav-links-list {
     height: 205px;
     width: 350px;
   }
+  .adobe-video-container{
+    height: 205px;
+    width: 320px;
+    margin-left: 0;
+   
+  }
+
   p.video-paragraph.alpaca,
   p.video-paragraph.prayernet{
     width: 21rem;
   }
-  }
+  
   ul.nav-links-list {
     display: flex;
     top: 0;
@@ -87,7 +94,11 @@ ul.nav-links-list {
   .alpaca-div {
     margin-left: 0rem;
   }
+  #footer{
+    z-index: 100;
 
+  }
+}
 
 /* Mobile */
 @media only screen and (max-width: 775px) {
