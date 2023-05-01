@@ -25,7 +25,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </head>
   <body>
-     <div id="pageTop"></div>
+    <div id="pageTop"></div>
     <div class="loading">
       <div class="loader">
         <div class="circle">
@@ -41,45 +41,83 @@
     </div>
 
     <div class="main-content" id="main-content">
-      <nav id="topNav" class="navbar nav">
-        <div class="container">
-          
-          <button class="nav-toggle-btn" aria-expanded="false" aria-controls="navbarDropdown">
-            <span>&#9776;</span>
-          </button>
-    
-          <a class="nav-brand" href="/index.html">BoldMov</a>    
-        
-          <ul class="nav-links">
-            <li class="nav-link">
-              <a href="#">Home</a>
-            </li>
-            <li class="nav-link">
-              <a href="#">Blog </a>
-            </li>
-            <li class="nav-link">
-              <a href="#">Portfolio</a>
-            </li>
-            <li class="nav-link">
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-    
-        </div>
-      </nav>
-  <section class="nav-section" id="disclaimer">Please review resume for detailed work history</section>
-      <section class="nav-section" id="examples">
+      <div class="container sticky-header">
+
+        <header class="sticky-header">
+          <nav id="topNav" class="nav navbar">
+            <!-- <button class="nav-toggle-btn" aria-expanded="false" aria-controls="navbarDropdown">
+              <span>&#9776;</span>
+            </button>
+            -->
+              <ul class="nav-links-list">
+                <li class= "nav-link">
+                  <a class="nav-link-item resume" href="./images/Marcus Jones Resume 2023.pdf"  target="_blank">View Resume</a
+                  >
+                </li>
+                <li class= "nav-link examples">
+                  <a class="nav-link-item" href="#examples">Examples</a>
+                </li>
+                <li class= "nav-link">
+                  <a class="nav-link-item" href="#recommendations">Recommendations</a>
+                </li>
+                <li class= "nav-link">
+                  <a class="nav-link-item" href="#software-engineering-skills"
+                    >Software Engineering Skills</a
+                    >
+                  </li>
+                  <li class= "nav-link">
+                    <a class="header-nav-link" href="#technical-management-skills"
+                    >Technical Management Skills</a
+                    >
+                  </li>
+                  <li class= "nav-link">
+                    <a class="header-nav-link" href="#about-me">About Me</a>
+                  </li>
+                <!-- <li class= "nav-link"><a class="header-nav-link" href="#photography-skills">Photography Skills</a></li> -->
+                <li class= "nav-link">  
+                  <a class="header-nav-link" href="#hobbies">Hobbies</a>
+                </li>
+              </ul>
+              <h1 id="header-name">Marcus Jones Portfolio</h1>
+          </nav>
+        </header>
+      </div>
+      <section class="example-section" id="examples">
         <h2 class="example-heading">Work Examples</h2>
         <ul>
-          <div id="video-examples">
-            <li>
-              <div class="example-title">Video Presentation: </div>
+          <div  id="examples-container">
+          <div class="example-container alpaca">
+              <div class="alpaca-div">
+
+                <li class="example-link"> 
+                  <a href="https://drive.google.com/file/d/12rP-K98LS7O7EA92WwF3vAAWz10e-UQF/view?usp=share_link" target="_blank">
+                    <strong class="example-title">Alpaca Vids Presentation</strong>
+                  </a>
+                </li>
+              </div>
+
+                <div class="video-container">
+                  <iframe src="https://drive.google.com/file/d/12rP-K98LS7O7EA92WwF3vAAWz10e-UQF/preview"
+                  width="420" height="310" 
+                    frameborder="0"></iframe>
+                </div>
+                <p class="video-paragraph alpaca">As a Team Lead, at Bloomtech, I managed a cross-functional team of developers and UX/UI Designers during a two month labs project at BloomTech.  I also scripted the presentation.</p>
+            </div>
+          <hr class="h-rule">
+            <div class="example-container prayernet">
               <li class="example-link"> 
-                <a href="https://drive.google.com/file/d/12rP-K98LS7O7EA92WwF3vAAWz10e-UQF/view?usp=share_link" target="_blank"><strong>Alpaca Vids Presentation</strong></a>
+                <a href="https://www.figma.com/file/NQrLEcmh4uydX3vtZGN00p/PrayerNet-App?node-id=1%3A2&t=M5ONkCRC4VcCyso7-1" target="_blank">
+                  <strong>Figma Prayernet</strong></a>
               </li>
-            </li>
-          </div>
-          <div id="website-examples">
+                <div class="video-container">
+                  <iframe src="https://drive.google.com/file/d/1vAAbyMLaJ6ALsGZQYzgf_GtX9PQy7twR/preview" 
+                  width="420" height="310" 
+                  frameborder="0"></iframe>
+                </div>
+                <p class="video-paragraph prayernet">This MVP was developed by a cross-functional team of Afriican based Developers and UX/UI Designers.  As the project manager, we meet weekly for sprints and reviw with the stakeholder </p>
+            </div>
+
+            <div id="website-examples">
             <li>
               <div class="example-title">Websites: </div>
               <li class="example-link"> 
@@ -100,12 +138,9 @@
           </div>
           <div id="figma-examples">
             <li>
-              <div class="example-title">Figma: </div>
-              <li id="figma-example-link"> 
-                <a href="https://www.figma.com/file/NQrLEcmh4uydX3vtZGN00p/PrayerNet-App?node-id=1%3A2&t=M5ONkCRC4VcCyso7-1" target="_blank"><strong> Prayernet</strong> | <span><a href="https://drive.google.com/file/d/1vAAbyMLaJ6ALsGZQYzgf_GtX9PQy7twR/view?usp=share_link"><strong>Prototype Video</strong></a></span></a>
-              </li>
             </li>
           </div>
+        </div>
         </ul>
       </section>
       <section class="nav-section" id="recommendations">
@@ -144,7 +179,7 @@
             <p>Marcus is an asset to any team and I highly recommend him for any role!</p>
           </li>
           <li>
-            <img class="user-image" src="./images/david_Monson.jpeg" alt="image of david"><a class="ref-linkedIn" href="https://www.linkedin.com/in/davidmonson1/" target="_blank"><img class="linked_logo" src="images/linkedin_logo.png" width="30" height="30"></a> </img>
+            <img class="user-image" src="./images/david_Monson.jpeg" alt="image of david"><a class="ref-linkedIn" href="https://www.linkedin.com/in/davidmonson1/" target="_blank"><img class="linked_logo" src="images/linkedin_logo.png" width="30" height="30" ></a> </img>
             <div class="recommendation-name"><strong>David Monson</strong></div>
             <div class="current-position"><strong>Head Of Design at Instawork</strong></div>
             <div class="degree-of-separation"><em>David worked with Marcus but on different teams</em></div>
@@ -239,25 +274,29 @@
             Intros Developed with Adobe After Effects
           </p>
           <ul class="adobe-example-list">
-            <li class="adobe-example-link">
-              <div><strong>BEOS</strong></div>
-              <a href="https://drive.google.com/file/d/1y4JiyX23x6idX_5UeVzY0ryQrfAz0JjN/view?usp=sharing"></a>
-              <iframe src="https://drive.google.com/file/d/1y4JiyX23x6idX_5UeVzY0ryQrfAz0JjN/preview" width="300" height="210"></iframe>
+            <li class="example-link"> 
+              <a href="https://drive.google.com/file/d/1y4JiyX23x6idX_5UeVzY0ryQrfAz0JjN/view?usp=sharing" target="_blank"><strong>BEOS</strong></a>
+              <div class="video-container adobe-video-container">
+                <iframe src="https://drive.google.com/file/d/1y4JiyX23x6idX_5UeVzY0ryQrfAz0JjN/preview" width="320" height="210"></iframe>
+              </div>
             </li>
-            <li class="adobe-example-link">
-              <div><strong>Trustee Investments</strong></div>
-              <a href="https://drive.google.com/file/d/1v75eTw2y43KVhP9qAwWO39xpQui-KkJg/view?usp=sharing"></a>
-              <iframe src="https://drive.google.com/file/d/1v75eTw2y43KVhP9qAwWO39xpQui-KkJg/preview" width="300" height="210"></iframe>
+            <li class="example-link"> 
+              <a href="https://drive.google.com/file/d/1v75eTw2y43KVhP9qAwWO39xpQui-KkJg/view?usp=sharing" target="_blank"><strong>Trustee Investments</strong></a>
+              <div class="video-container adobe-video-container">
+                <iframe src="https://drive.google.com/file/d/1v75eTw2y43KVhP9qAwWO39xpQui-KkJg/preview" width="320" height="210"></iframe>
+              </div>
             </li>
-            <li class="adobe-example-link">
-              <div><strong>Barcode Avengers</strong></div>
-              <a href="https://drive.google.com/file/d/1M4TFOQlvpvwwzouigrqFXV7Uy9diOhpN/view?usp=share_link"></a>
-              <iframe src="https://drive.google.com/file/d/1M4TFOQlvpvwwzouigrqFXV7Uy9diOhpN/preview" width="300" height="210"></iframe>
+            <li class="example-link"> 
+              <a href="https://drive.google.com/file/d/1M4TFOQlvpvwwzouigrqFXV7Uy9diOhpN/view?usp=share_link" target="_blank"><strong>Barcode Avengers</strong></a>
+              <div class="video-container adobe-video-container">
+                <iframe src="https://drive.google.com/file/d/1M4TFOQlvpvwwzouigrqFXV7Uy9diOhpN/preview" width="320" height="210"></iframe>
+              </div>
             </li>
-            <li class="adobe-example-link">
-              <div><strong>Talk To Me</strong></div>
-              <a href="https://drive.google.com/file/d/1VecJgexMp7ooXGpo1BYUzxImygVse3l_/view?usp=share_link"></a>
-              <iframe src="https://drive.google.com/file/d/1VecJgexMp7ooXGpo1BYUzxImygVse3l_/preview" width="300" height="210"></iframe>
+            <li class="example-link"> 
+              <a href="https://drive.google.com/file/d/1VecJgexMp7ooXGpo1BYUzxImygVse3l_/view?usp=share_link" target="_blank"><strong>Talk To Me</strong></a>
+              <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1VecJgexMp7ooXGpo1BYUzxImygVse3l_/preview" width="320" height="210"></iframe>
+              </div>
             </li>
           </ul>
           
@@ -276,7 +315,6 @@
       <a id="scrollUp" href="#pageTop">
     <i class="fa-solid fa-arrow-up"></i>
   </a>
-
     </div>
     <!-- Resume Modal -->
     <div id="resume-modal" class="res-modal">
@@ -292,37 +330,30 @@
     </div>
 
 
-
-
-
-
-
-
-
     <script>
-
+    
 
 //BUTTONS
-const nav = document.getElementById("topNav");
+// const nav = document.getElementById("topNav");
     
-    window.onscroll = function (){
-  if (window.pageYOffset > 250){
-    nav.classList.add("sticky");
-  } else {
-    nav.classList.remove("sticky")
-  }
- }
+//     window.onscroll = function (){
+//   if (window.pageYOffset > 250){
+//     nav.classList.add("sticky");
+//   } else {
+//     nav.classList.remove("sticky")
+//   }
+//  }
   
   const navButton = document.querySelector("button[aria-expanded]");
   
-  function toggleNav({ target }){
-    console.log('click')
-    const expanded = target.getAttribute("aria-expanded") === 'true' || false;
-    navButton.setAttribute("aria-expanded", !expanded);
+  // function toggleNav({ target }){
+  //   console.log('click')
+  //   const expanded = target.getAttribute("aria-expanded") === 'true' || false;
+  //   navButton.setAttribute("aria-expanded", !expanded);
     
-  }
+  // }
 
-  navButton.addEventListener("click", toggleNav);
+  // navButton.addEventListener("click", toggleNav);
 
 
   //MODALS
@@ -371,6 +402,31 @@ const nav = document.getElementById("topNav");
         }
         updateModalContent();
       }
+
+
+
+
+  //FADE OUT HEADER NAME
+  const headerName = document.getElementById("header-name");
+  window.onscroll =  function() {
+      if (window.innerWidth <= 800 && window.innerWidth > 399) {
+      
+        if (window.pageYOffset > 100) { // Change 100 to the number of pixels you want to scroll before hiding the element
+        headerName.classLiist.add('sticky');
+      } 
+        headerName.classLiist.remove("sticky");
+    }
+  };
+
+  // window.onscroll('scroll', () => {
+  //   if (window.innerWidth <= 800 && window.innerWidth > 399) {
+  //     if (window.pageYOffset > 0) {
+  //       headerName.classList.add('hide');
+  //     } else {
+  //       headerName.classList.remove('hide');
+  //     }
+  //   }
+  // });
 
 //ANIMATION
 // hide creative text by default
@@ -447,16 +503,15 @@ setTimeout(() => {
       const header = document.querySelector('.sticky-header');
       const headerHeight = header.offsetHeight;
 
-function toggleHeader() {
-  if (window.scrollY > headerHeight) {
-    header.classList.add('sticky');
-  } else {
-    header.classList.remove('sticky');
-  }
-}
+      function toggleHeader() {
+        if (window.scrollY > headerHeight) {
+          header.classList.add('sticky');
+        } else {
+          header.classList.remove('sticky');
+        }
+      }
 
-window.addEventListener('scroll', toggleHeader);
-
+      window.addEventListener('scroll', toggleHeader);
 
 
 
