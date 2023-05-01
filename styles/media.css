@@ -2,14 +2,58 @@
   .main-container {
     width: 80%;
   }
+  .container.sticky-header{
+    padding-top: 0px;
+    padding-left: 0;
+    
+  }
+
+ul.nav-links-list {
+  padding-top: 1.2rem;
+
+}
+  #topNav.nav.navbar{
+    padding: 0;
+
+  }
+  section{
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .video-container{
+    height: 205px;
+    width: 350px;
+  }
+  p.video-paragraph.alpaca,
+  p.video-paragraph.prayernet{
+    width: 21rem;
+  }
+  }
   ul.nav-links-list {
     display: flex;
     top: 0;
   }
+  a.nav-link-item{
+    font-size: small
+  }
   .sticky-header {
     position: fixed;
   }
+  .content-section{
+    margin-top: 2rem;
 
+  }
+  section{
+    padding-top: calc(9rem + 1px);
+
+  }
+  section#examples.main-content{
+  padding-top: calc(15rem + 1px);
+
+}
   .example-container {
     margin-bottom: -3rem;
   }
@@ -43,7 +87,7 @@
   .alpaca-div {
     margin-left: 0rem;
   }
-}
+
 
 /* Mobile */
 @media only screen and (max-width: 775px) {
@@ -163,10 +207,6 @@
     left: 0;
   }
 
-  section#examples {
-    padding-top: calc(10rem + 1px);
-  }
-
   #footer {
     font-size: 0.6rem;
   }
@@ -221,8 +261,6 @@
     align-items: center;
     margin-top: 0.4rem;
     padding: 0;
-  }
-  a.nav {
   }
 
   .container {
