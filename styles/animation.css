@@ -1,0 +1,147 @@
+.fade-section {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.fade-section.fade-in {
+  opacity: 1;
+  animation: 1s ease-in-out forwards;
+}
+
+.example-heading.fade-in {
+  animation-delay: 0.5s;
+}
+
+.video-paragraph.fade-in {
+  animation-delay: 0.5s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(
+      0
+    ); /* Adjust the value to control the distance of the fade-in effect */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50px);
+  }
+}
+
+/*SLIDES*/
+
+/*VIDEO SLIDE*/
+/* .video-container{
+  opacity: 0;
+} */
+
+
+/*KEYFRAMES*/
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    animation-duration: 2s;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+    animation-duration: 2s;
+  }
+}
+
+
+
+/*RIGHT SIDE OF SCREEN*/
+
+.video-container.right.slide-left {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slide-left .8s ease-in-out forwards;
+}
+
+.example-link.slide-left.video-container {
+  animation-delay: 0.5s;
+}
+
+/*lEFT SIDE OF SCREEN*/
+.video-container.left.slide-right {
+  opacity: 1;
+  transform: translateX(-100%);
+  animation: slide-right .8s ease-in-out forwards;
+  overflow: hidden;
+}
+ 
+.example-link.slide-right.video-container {
+  animation-delay: 0.5s;
+}
+
+.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* not used yet */
+.slide-out {
+  transform: translateX(100%);
+}
+
+.slide-left {
+  transform: translateX(-150%);
+}
+
+.slide-right {
+  transform: translateX(150%);
+}
+/* 
+  Transform:
+transform is a CSS property that allows you to modify the shape, position, or size of an element. It is used to apply various transformations such as translation, rotation, scaling, and skewing. With transform, you can manipulate elements in 2D or 3D space.
+
+Use case:
+Let's say you have an image and you want to apply a rotation effect when a user hovers over it. You can use the transform property with the rotate function to achieve this effect. Here's an example:
+
+css
+Copy code
+.image-container:hover {
+  transform: rotate(45deg);
+}
+In this case, when the user hovers over the image, it will rotate by 45 degrees clockwise.
+
+Transition:
+transition is a CSS property that allows you to create smooth transitions between different property values. It specifies the transition effect and duration for a property change. When the value of a property changes, the transition effect is applied to smoothly animate the change.
+
+Use case:
+Suppose you have a button and you want to add a smooth transition effect when its background color changes on hover. You can use the transition property to define the duration and type of transition. Here's an example:
+
+css
+Copy code
+.button {
+  background-color: blue;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: red;
+}
+In this example, when the user hovers over the button, the background color will transition smoothly from blue to red over a duration of 0.3 seconds.
+
+To summarize:
+
+Use transform when you want to modify the shape, position, or size of an element, applying transformations like rotation, translation, scaling, or skewing.
+Use transition when you want to create smooth transitions between different property values, animating changes in properties such as color, size, position, or opacity.
+Both transform and transition are powerful CSS properties that enable you to create engaging and interactive effects on your webpages. */

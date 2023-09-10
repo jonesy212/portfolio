@@ -1,9 +1,43 @@
+
+/* *{
+  border:1px solid #9f1bc8
+} */
+.bar.inner-bar {
+  border-radius: 3.5rem;
+  width: 100px;
+  border: 1px solid transparent;
+  position: absolute;
+  top: 0rem;
+  left: 0px;
+  background-color: blue;
+}
+
+.bar {
+  top: 0;
+  left: 50px;
+  height: 8px;
+  position: absolute;
+}
+
+#bar-2.outter-bar{
+  left: 50px;
+  height: 8px;
+}
+
+.outter-bar {
+  width: 196px;
+  position: absolute;
+  border: 0.5px solid black;
+  border-radius: 3.5rem;
+  top: 163rem;
+}
 /* Aria Controls */
 [aria-controls="navbarDropdown"] {
   display: none;
 }
 .container {
   margin: auto 0;
+  padding-left: 0
 }
 .navbar {
   display: flex;
@@ -71,7 +105,9 @@ header {
   text-align: center;
   z-index: 15;
 }
-
+.section-header{
+  width: 80%;
+}
 .sticky-header {
   position: fixed;
   width: 100%;
@@ -79,6 +115,8 @@ header {
   background-color: #ffffff; /* Set the background color to dark blue */
   color: #040404; /* Set the text color to white */
   transition: background-color 0.5s ease; /* Add a smooth transition effect */
+  z-index: 10;
+  top: 0;
 }
 .nav-link-item.resume {
   border: 1px solid black;
@@ -95,7 +133,7 @@ header {
 .nav-link-item.resume:active {
   background-color: white;
   border: 1px solid black;
-  color: black;
+  /* color: black; */
 }
 
 li.nav-link {
@@ -118,6 +156,10 @@ section {
   border-top: none;
   padding-left: 50px;
   padding-right: 50px;
+}
+#media-section-header{
+  width: 100%;
+  justify-content: flex-start;
 }
 #about-me,
 #software-engineering-skills,
@@ -148,18 +190,22 @@ ul.nav-links {
 }
 a.nav-link-item {
   margin-right: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 #topNav.nav.navbar {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white
 }
-ul.nav-links-list{
+ul.nav-links-list {
   width: 100%;
-    display: flex;
-    padding-left: 0
+  display: flex;
+  padding-left: 0;
 }
-a.nav-link-item.resume{
+a.nav-link-item.resume {
   font-size: medium;
 }
 
@@ -197,11 +243,24 @@ nav a:active {
   color: #34314b;
 }
 
+section {
+  min-height: 100vh;
+  align-items: center;
+}
 #about-me {
   display: flex;
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-left: none;
+  border-right: none;
+  justify-content: space-around;
+  border-bottom-left-radius: 3.5rem;
+  border-bottom-right-radius: 1.5rem;
 }
 #bio-paragraph {
-  margin-left: 2rem;
+  width: 70%;
+  text-align: justify;
 }
 /* ul {
   display: flex;
@@ -345,7 +404,6 @@ li:before {
 #creative-text {
   color: black;
   animation: fade-in 1s ease-in-out forwards;
-
 }
 
 .creative {
@@ -358,7 +416,6 @@ li:before {
   font-weight: bold;
   display: none;
   width: 22rem;
-
 }
 
 .loading p {
@@ -444,9 +501,7 @@ li:before {
     opacity: 1;
   }
 }
-.fade-in {
-  animation: fade-in 1s;
-}
+ 
 .hide {
   animation: fade-out 2s ease forwards;
 }
@@ -461,6 +516,7 @@ li:before {
 }
 
 /*examples*/
+
 .examples-container {
   border: 1px gray solid;
   border-radius: 2.5rem;
@@ -470,18 +526,23 @@ li:before {
   padding-bottom: 3rem;
 }
 
-section.examples{
+section.examples {
   padding-top: 5rem;
 }
 #example-list {
   margin-left: 2rem;
 }
-.alpaca-div{
-  margin-left:1rem
+.alpaca-div {
+  margin-left: 1rem;
 }
-#example-title{
+.video-title {
+  margin: 0;
   margin-left: 1rem;
   display: flex;
+  width: 8%;
+}
+.video-title .prayernet {
+  margin-left: 1rem;
 }
 .video-container {
   border-radius: 10px;
@@ -490,45 +551,47 @@ section.examples{
   width: 420px;
   height: 310px;
 }
-.adobe-video-container{
+.adobe-video-container {
   width: 320px;
   height: 210px;
 }
-ul{
+ul {
   padding-left: 0;
 }
-ul.example-section{
+ul.example-section {
   border: 1px solid gray;
   border-radius: 3rem 2rem 2rem 3rem;
   border-left: none;
   padding: 1rem 0 1rem 1rem;
-
 }
-.example-container{
+.example-container {
+  display: flex;
+  overflow: hidden; 
   margin-bottom: 3rem;
-  
 }
-.example-container.alpaca{
+.example-container.alpaca {
   display: flex;
   justify-content: flex-end;
   flex-direction: row-reverse;
 }
 .video-paragraph {
   width: 43rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 4rem;
+  text-align: justify;
+  align-items: center;
 }
 
-.h-rule{
-  border-radius: .5rem
+.h-rule {
+  border-radius: 0.5rem;
 }
 .video-paragraph.prayernet {
-  padding-left: 1rem;
-  font-size: 1.5rem;
+  padding-left: 6rem;
 }
 .video-paragraph.alpaca {
   display: flex;
   justify-content: flex-start;
+  padding-right: 6rem;
 }
 .prayernet {
   position: relative;
@@ -537,8 +600,24 @@ ul.example-section{
   flex-direction: row;
   justify-content: flex-end;
   z-index: -1;
-
 }
+/* IMAGE IN VIDEO*/
+img.ndfHFb-c4YZDc-aTv5jf-bVEB4e-RJLb9c {
+  height: 80%;
+  width: 120%;
+  position: absolute;
+  /* right: -6px; */
+  top: 35px;
+}
+
+/*PLAY BUTTON*/
+.ndfHFb-c4YZDc-i5oIFb .ndfHFb-c4YZDc-LgbsSe {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  left: 175px;
+}
+
 #figma-examples {
   z-index: 10;
 }
@@ -572,16 +651,17 @@ ul.example-section{
 
 .example-title {
   margin-right: 0.5rem;
+  width: 13%;
 }
 .video-examples {
   z-index: 10;
 }
-.example-link {
+/* .example-link {
   margin-right: 1rem;
   z-index: 10;
-}
-.example-link.alpaca{
-  margin-left:1rem
+} */
+.example-link.alpaca {
+  margin-left: 1rem;
 }
 
 .adobe-example-list {
@@ -614,6 +694,11 @@ ul.example-section{
 
 a.ref-linkedIn {
   margin-bottom: 10rem;
+}
+
+.bio-img {
+  width: 64%;
+  border-radius: 20%;
 }
 
 /* Carousel */

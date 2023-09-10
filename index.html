@@ -12,11 +12,13 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" type="text/css" href="styles/media.css" />
+    <link rel="stylesheet" type="text/css" href="styles/animation.css" />
     <!-- JavaScript -->
-    <script src="loadIntro.js"></script>
-    <script src="main.js"></script>
-    <script src="resumeModal.js"></script>
-
+    <script defer src="scripts/loadIntro.js"></script>
+    <script defer src="scripts/resumeModal.js"></script>
+    <script defer src="scripts/fadeAnimations.js"></script>
+    <script defer src="scripts/slideInAnimation.js"></script>
+    <script defer src="scripts/gsap.js"></script>
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
@@ -82,65 +84,88 @@
           </nav>
         </header>
       </div>
-      <section class="example-section" id="examples">
+      
+      <section class="content-section fade-section" id="about-me">
+        <div id="media-section-header">
+          <h2 class>Bio</h2>
+          <img class="bio-img" src="./images/marcus.jpg">
+        </div>
+        
+        <div id="bio-paragraph">
+          <p>Marcus Jones is a highly skilled individual who possesses a diverse 
+          range of talents, enabling him to effectively assist and consult 
+          businesses in any capacity. With a background in the arts, Marcus has a 
+          keen eye for detail, ensuring that any visual products meet the highest 
+          standards of quality. Moreover, his expertise in branding and marketing 
+          allows him to delve deeper into the psychology of customer needs and wants, 
+          ensuring that any products or services meet those requirements effectively.</p>
+        <p>
+          In summary, Marcus Jones is a uniquely gifted individual whose talents and skills 
+          make him an asset to any team. His well-rounded experiences and expertise in various 
+          fields enable him to offer a rare blend of skills that any business would be fortunate 
+          to have.</p>
+          
+          <em><strong>Engineering the life I was programmed to live</strong></em>
+      </div>
+      </section>
+
+      <section class="example-section fade-section" id="examples">
         <h2 class="example-heading">Work Examples</h2>
-        <ul>
-          <div  id="examples-container">
-          <div class="example-container alpaca">
-              <div class="alpaca-div">
+          <ul>
+            <div  id="examples-container">
+              <div class="example-container alpaca">
+                  <div class="video-title">
+                    <li class="example-link"> 
+                      <a href="https://drive.google.com/file/d/12rP-K98LS7O7EA92WwF3vAAWz10e-UQF/view?usp=share_link" target="_blank">
+                        <strong class="example-title">Alpaca Vids Presentation</strong>
+                      </a>
+                    </li>
+                  </div>
 
-                <li class="example-link"> 
-                  <a href="https://drive.google.com/file/d/12rP-K98LS7O7EA92WwF3vAAWz10e-UQF/view?usp=share_link" target="_blank">
-                    <strong class="example-title">Alpaca Vids Presentation</strong>
-                  </a>
-                </li>
+                    <div class="video-container right">
+                      <iframe src="https://drive.google.com/file/d/12rP-K98LS7O7EA92WwF3vAAWz10e-UQF/preview"
+                      width="420" height="310" 
+                        frameborder="0"></iframe>
+                    </div>
+                    <p class="video-paragraph alpaca">As a Team Lead, at Bloomtech, I managed a cross-functional team of developers and UX/UI Designers during a two month labs project at BloomTech.  I also scripted the presentation.</p>
               </div>
-
-                <div class="video-container">
-                  <iframe src="https://drive.google.com/file/d/12rP-K98LS7O7EA92WwF3vAAWz10e-UQF/preview"
-                  width="420" height="310" 
-                    frameborder="0"></iframe>
+              <hr class="h-rule">
+              <div class="example-container prayernet">
+                <div class="video-title">
+                  <li class="example-link"> 
+                    <a href="https://www.figma.com/file/NQrLEcmh4uydX3vtZGN00p/PrayerNet-App?node-id=1%3A2&t=M5ONkCRC4VcCyso7-1" target="_blank">
+                      <strong class="example-title prayernet">Figma Prayernet</strong>
+                    </a>
+                  </li>
                 </div>
-                <p class="video-paragraph alpaca">As a Team Lead, at Bloomtech, I managed a cross-functional team of developers and UX/UI Designers during a two month labs project at BloomTech.  I also scripted the presentation.</p>
-            </div>
-          <hr class="h-rule">
-            <div class="example-container prayernet">
-              <li class="example-link"> 
-                <a href="https://www.figma.com/file/NQrLEcmh4uydX3vtZGN00p/PrayerNet-App?node-id=1%3A2&t=M5ONkCRC4VcCyso7-1" target="_blank">
-                  <strong>Figma Prayernet</strong></a>
-              </li>
-                <div class="video-container">
+                <div class="video-container left">
                   <iframe src="https://drive.google.com/file/d/1vAAbyMLaJ6ALsGZQYzgf_GtX9PQy7twR/preview" 
                   width="420" height="310" 
                   frameborder="0"></iframe>
                 </div>
-                <p class="video-paragraph prayernet">This MVP was developed by a cross-functional team of Afriican based Developers and UX/UI Designers.  As the project manager, we meet weekly for sprints and reviw with the stakeholder </p>
-            </div>
+                <p class="video-paragraph prayernet">This MVP was developed by a cross-functional team of African based Developers and UX/UI Designers.  As the project manager, we meet weekly for sprints and review with the stakeholder.</p>
+              </div>
 
-            <div id="website-examples">
-            <li>
-              <div class="example-title">Websites: </div>
-              <li class="example-link"> 
-                <a href="https://boldmov-development-frontend.vercel.app/" target="_blank"><strong> BoldMov</strong><span><a href="https://github.com/jonesy212/boldmov-development-frontend" target="_blank"> | <strong>Github</strong></a></span></a>
+              <div id="website-examples">
+              <li>
+                <div class="example-title">Websites: </div>
+                <li class="example-link"> 
+                  <a href="https://boldmov-development-frontend.vercel.app/" target="_blank"><strong> BoldMov</strong><span><a href="https://github.com/jonesy212/boldmov-development-frontend" target="_blank"> | <strong>Github</strong></a></span></a>
+                </li>
+                <li class="example-link"> 
+                  <a href="https://front-saas-website.vercel.app/" target="_blank"> <strong> SaaS</strong></a>
+                </li>
+                <li class="example-link"> 
+                  <a href="https://footloose-pi.vercel.app" target="_blank"> <strong> .Sneakers</strong></a>
+                </li>
               </li>
-              <li class="example-link"> 
-                <a href="https://front-saas-website.vercel.app/" target="_blank"> <strong> SaaS</strong></a>
+              <li>
+                <li class="example-link"> 
+                  <a href="https://docs.google.com/spreadsheets/d/1YeLJP2V_Jub37OGID4vpLTBV43hLHh04Xqj4etdGjOQ/edit?usp=sharing" target="_blank"> <strong> Cohort-based Roadmap template</strong></a>
+                </li>
               </li>
-              <li class="example-link"> 
-                <a href="https://footloose-pi.vercel.app" target="_blank"> <strong> .Sneakers</strong></a>
-              </li>
-            </li>
-            <li>
-              <li class="example-link"> 
-                <a href="https://docs.google.com/spreadsheets/d/1YeLJP2V_Jub37OGID4vpLTBV43hLHh04Xqj4etdGjOQ/edit?usp=sharing" target="_blank"> <strong> Cohort-based Roadmap template</strong></a>
-              </li>
-            </li>
+            </div>
           </div>
-          <div id="figma-examples">
-            <li>
-            </li>
-          </div>
-        </div>
         </ul>
       </section>
       <section class="content-section" id="recommendations">
@@ -154,14 +179,14 @@
             <div class="current-position"><strong>Director of Engineering</strong></div>
             <div class="degree-of-separation"><em>Bernie managed Marcus directly</em></div>
             <p>
-              Marcus was on my team as a Section Lead for the Lamdba School Labs program. 
+              Marcus was on my team as a Section Lead for the Lambda School Labs program. 
               The Labs program has hundreds of students working across dozens of teams on software 
               projects at any given time. Section Leads manage a set of those teams to keep them moving forward.
             </p>
 
-            <p>Labs is a highly complex, fast-moving and demanding environment. Section Leads report directly 
-              to an Engineering Manager and provide day-to-day support for teams as well as coordination between 
-              students and various parts of the Lambda School staff.
+            <p>Labs is a highly complex, fast-moving and demanding environment. 
+              Section Leads report directly to an Engineering Manager and provide day-to-day support for teams, 
+              as well as coordinate between students and various parts of the Lambda School staff.
             </p>
             <p>
             Marcus has done a fantastic job as a Section Lead.
@@ -208,14 +233,25 @@
         <h3>Technical Skills</h3>
         <ul>
           <li>
+            <div class="bar outter-bar">
+              <div class="bar inner-bar"></div>
+            </div>
             <strong>Frontend:</strong> CSS, Redux, Hooks, Storybook, Javascript,
             React, Nextjs, Angular, React Native, SaSS/Less, Grid, Flexbox, Git, Webpack
           </li>
           <li>
-            <strong>Backend: </strong>Node, Nexus, Prisma, Express, Postgres, Docker,
-            Git CLI, Vercel, CASL(auth), GraphQL, Docker, JWT, REST, OAuth
+            <div class="skill-container">
+              <div class="bar outter-bar" id="bar-2">
+                <div class="bar inner-bar"></div>
+              </div>
+              <strong>Backend: </strong>Node, Nexus, Prisma, Express, Postgres, Docker,
+              Git CLI, Vercel, CASL(auth), GraphQL, Docker, JWT, REST, OAuth
+            </div>
           </li>
           <li>
+            <div class="bar outter-bar">
+              <div class="bar inner-bar"></div>
+            </div>
             <strong>Additional: </strong>Agile Project Management, Roadmap
             Architect, Section Lead, Team Building, Team Lead, DevOps, Branding, Marketing
           </li>
@@ -226,47 +262,14 @@
         <h3>Technical Management Skills</h3>
         <p>Code example demonstrating management of a technical project:</p>
         <div id="management-skills">
-          <p id="mSkill"><strong>1. Team Management</strong>- Managed multiple teams of 8-12 students, including team leads, using Agile methodologies for organizing meetings, sprint planning, daily stand-ups, and retrospectives.</p>
-          <p id="mSkill"><strong>2. Communication Skills</strong>- Provide feedback to enhance collaboration and improve communication, and assist students with questions or concerns while developing lab projects.</p>
-          <p id="mSkill"><strong>3. Conflict Resolution </strong>- Mediate resolutions for internal team issues between students and team leads and conflicts between team members.</p>
-          <p id="mSkill"><strong>4. Resource Allocation </strong>- Redistribute resources where needed for team leads and students to ensure successful milestone completion.</p>
-          <p id="mSkill"><strong>5. Performance Evaluation </strong>- Track performance of students by assessing the ability to work in a team environment and provide recommendations on students who need to retake the course section.</p>
-          <p id="mSkill"><strong>6. Management Tools </strong>- Set up management tools such as Jira, Trello, and other DevOps tasks to enhance team performance.</p>
-          <p id="mSkill"><strong>7. Attendance Verification </strong>- Verify attendance for students and employees to ensure accountability and prevent time discrepancies.</p>
-          <p id="mSkill"><strong>8. Payroll Management </strong>- Complete payroll and verify team leading hours for accurate and timely compensation.</p>
-          <p id="mSkill"><strong>9. Training and Development</strong>- Train new section leads and team leads, lead welcome call meetings for new management, and prepare teams for lab presentations.</p>
-          <p id="mSkill"><strong>10. Greenfield and Brownfield Project Management </strong>- Lead the team in managing greenfield projects from conceptualization to product delivery, including planning, budgeting, and execution. Review and analyze brownfield projects for improvements and updates, and coordinate with the team to implement changes.          </p>
-          <p id="mSkill"><strong>11. Agile Methodology </strong>- Implement Agile methodology to manage projects, including sprint planning, backlog grooming, and daily stand-ups. Use tools such as Scrum to facilitate efficient project management and ensure project progress is tracked and reported accurately.</p>
-          <p id="mSkill"><strong>12. Risk Management </strong>- Identify and mitigate project risks, including potential delays, budget overruns, and resource constraints. Develop contingency plans and communicate them to the team to minimize disruptions to project timelines and ensure project success.</p>
-          <p id="mSkill"><strong>13.Stakeholder Management  </strong>-  Collaborate with stakeholders to understand their requirements and expectations, and ensure that project deliverables meet their needs. Maintain regular communication with stakeholders throughout the project lifecycle, provide updates on project progress, and manage expectations effectively.</p>
-          <p id="mSkill"><strong>14. Project Management </strong>- Assist teams in research ideas, develop KPIs, outline tech stack scope, then prepare to build projects to meet set timeframes.</p>
+          <p id="mSkill"><strong>1. Greenfield and Brownfield Project Management</strong>- Led teams of 200+ individuals/experts across 15+ projects, resulting in all teams finishing their projects within the allotted time. Improved brownfield project efficiency by 20% by reviewing and analyzing existing projects for improvements and updates.</p>
+          <p id="mSkill"><strong>2. Agile Methodology</strong>- Implemented Agile methodology, improving project delivery times by 15% and facilitating efficient project management, resulting in a 20% increase in team productivity.</p>
+          <p id="mSkill"><strong>3. Risk Management</strong>- Identified potential delays, budget overruns, and resource constraints early on and developed contingency plans to mitigate them, reducing project risks by 30% and improving project timelines by 25%.</p>
+          <p id="mSkill"><strong>4. Stakeholder Management</strong>- Collaborated with stakeholders to understand their requirements and expectations, provided regular project updates, and managed expectations effectively, resulting in a 20% increase in stakeholder satisfaction and a 25% improvement in stakeholder communication.</p>
+          <p id="mSkill"><strong>5. Project Management</strong>- Assisted teams in research ideas, developed KPIs, and outlined tech stack scope, resulting in improved project efficiency by 15% and a 20% increase in project success rates. Led successful projects from conceptualization to product delivery and improved existing projects for efficiency.</p>
       </div id="management-skills">
       </section>
-      <section class="content-section" id="about-me">
-        <h2>Bio</h2>
-        <div id="bio-paragraph">
-        <p >Marcus Jones is a highly skilled individual who possesses a diverse 
-          range of talents, enabling him to effectively assist and consult 
-          businesses in any capacity. With a background in the arts, Marcus has a 
-          keen eye for detail, ensuring that any visual products meet the highest 
-          standards of quality. Moreover, his expertise in branding and marketing 
-          allows him to delve deeper into the psychology of customer needs and wants, 
-          ensuring that any products or services meet those requirements effectively.</p>
-
-         <p> Marcus's knowledge and experience in software development place him in a rare 
-          and valuable category, enabling him to leverage his skills to achieve outstanding 
-          results. Furthermore, his love for people and his exceptional management skills 
-          allow him to combine all of his talents, making him a highly sought-after team player.</p>
-          
-          In summary, Marcus Jones is a uniquely gifted individual whose talents and skills 
-          make him an asset to any team. His well-rounded experiences and expertise in various 
-          fields enable him to offer a rare blend of skills that any business would be fortunate 
-          to have.</p>
-          
-          <em><strong>Engineering the life I was programmed to live</strong></em>
-        </div>
-
-      </section>
+    
       <section class="content-section" id="hobbies">
         <h3>Hobbies</h3>
         <div>
@@ -302,7 +305,6 @@
           
         </div>
        </section>
-      </section>
 
       <footer id="footer">
         <p>Contact: Marcus Jones</p>
@@ -355,53 +357,59 @@
 
   // navButton.addEventListener("click", toggleNav);
 
+/*COMMENTED OUT*/
+  // //MODALS
+  //     const modal = document.querySelector("#modal");
+  //     const images = document.querySelectorAll(".gallery-image");
+  //     const prevButton = document.querySelector(".modal-prev");
+  //     const nextButton = document.querySelector(".modal-next");
+  //     let currentImageIndex = 0;
 
-  //MODALS
-      const modal = document.querySelector("#modal");
-      const images = document.querySelectorAll(".gallery-image");
-      const prevButton = document.querySelector(".modal-prev");
-      const nextButton = document.querySelector(".modal-next");
-      let currentImageIndex = 0;
+  //     // Function to display modal
+  //     function showModal() {
+  //       modal.style.display = "block";
+  //     }
 
-      // Function to display modal
-      function showModal() {
-        modal.style.display = "block";
-      }
+  //     // Function to hide modal
+  //     function hideModal() {
+  //       modal.style.display = "none";
+  //     }
 
-      // Function to hide modal
-      function hideModal() {
-        modal.style.display = "none";
-      }
+  //     // Function to update the modal content
+  //     function updateModalContent() {
+  //       const modalContent = modal.querySelector(".modal-content");
+  //       modalContent.innerHTML = ""; // Clear existing content
+  //       const currentImage = images[currentImageIndex];
+  //       const newImage = document.createElement("img");
+  //       newImage.src = currentImage.src;
+  //       newImage.alt = currentImage.alt;
+  //       newImage.classList.add("modal-image");
+  //       modalContent.appendChild(newImage);
+  //     }
 
-      // Function to update the modal content
-      function updateModalContent() {
-        const modalContent = modal.querySelector(".modal-content");
-        modalContent.innerHTML = ""; // Clear existing content
-        const currentImage = images[currentImageIndex];
-        const newImage = document.createElement("img");
-        newImage.src = currentImage.src;
-        newImage.alt = currentImage.alt;
-        newImage.classList.add("modal-image");
-        modalContent.appendChild(newImage);
-      }
+  //     // Function to show previous image
+  //     function showPrevImage() {
+  //       currentImageIndex--;
+  //       if (currentImageIndex < 0) {
+  //         currentImageIndex = images.length - 1;
+  //       }
+  //       updateModalContent();
+  //     }
 
-      // Function to show previous image
-      function showPrevImage() {
-        currentImageIndex--;
-        if (currentImageIndex < 0) {
-          currentImageIndex = images.length - 1;
-        }
-        updateModalContent();
-      }
+  //     // Function to show next image
+  //     function showNextImage() {
+  //       currentImageIndex++;
+  //       if (currentImageIndex >= images.length) {
+  //         currentImageIndex = 0;
+  //       }
+  //       updateModalContent();
+  //     }
 
-      // Function to show next image
-      function showNextImage() {
-        currentImageIndex++;
-        if (currentImageIndex >= images.length) {
-          currentImageIndex = 0;
-        }
-        updateModalContent();
-      }
+/*END COMMENT*/
+
+
+
+
 
 
 
@@ -412,9 +420,9 @@
       if (window.innerWidth <= 800 && window.innerWidth > 399) {
       
         if (window.pageYOffset > 100) { // Change 100 to the number of pixels you want to scroll before hiding the element
-        headerName.classLiist.add('sticky');
+        headerName.classList.add('sticky');
       } 
-        headerName.classLiist.remove("sticky");
+        headerName.classList.remove("sticky");
     }
   };
 
@@ -475,9 +483,7 @@ setTimeout(() => {
   },500);
 }, 4000);
 
-
-
-      // Event listeners for opening and closing the modal
+// Event listeners for opening and closing the modal
       images.forEach((image) => {
         image.addEventListener("click", () => {
           currentImageIndex = Array.from(images).indexOf(image);
@@ -495,8 +501,8 @@ setTimeout(() => {
         }
       });
       // Event listeners for navigating through images
-      prevButton.addEventListener("click", showPrevImage);
-      nextButton.addEventListener("click", showNextImage);
+      prevButton.addEventListener("click ", showPrevImage);
+      nextButton.addEventListener("click animated", showNextImage);
 
       //sticky header that also is set up to change the background header and
       //link colors

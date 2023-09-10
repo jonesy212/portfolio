@@ -1,66 +1,75 @@
+@media screen and ( min-width: 400px){
+ #about-me .section-header{
+    margin-top: -4rem;
+  }
+
+}
+@media screen and (max-width: 725px) {
+  .container.sticky-header {
+    max-width: 540px;
+  }
+
+  #bio-paragraph{
+    padding-top: 2rem;
+    width: 80%;
+  }
+
+}
+
 @media only screen and (max-width: 727px) {
   .main-container {
     width: 80%;
   }
-  .container.sticky-header{
+  .container.sticky-header {
     padding-top: 0px;
     padding-left: 0;
-    
   }
 
-ul.nav-links-list {
-  padding-top: 1.2rem;
-
-}
-  #topNav.nav.navbar{
+  ul.nav-links-list {
+    padding-top: 1.2rem;
+  }
+  #topNav.nav.navbar {
     padding: 0;
-
   }
-  section{
+  section {
     padding-left: 25px;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
   }
-  .video-container{
+  .video-container {
     height: 205px;
     width: 350px;
   }
-  .adobe-video-container{
+  .adobe-video-container {
     height: 205px;
     width: 320px;
     margin-left: 0;
-   
   }
 
   p.video-paragraph.alpaca,
-  p.video-paragraph.prayernet{
+  p.video-paragraph.prayernet {
     width: 21rem;
   }
-  
+
   ul.nav-links-list {
     display: flex;
     top: 0;
   }
-  a.nav-link-item{
-    font-size: small
+  a.nav-link-item {
+    font-size: small;
   }
-  .sticky-header {
-    position: fixed;
-  }
-  .content-section{
+
+  .content-section {
     margin-top: 2rem;
-
   }
-  section{
+  section {
     padding-top: calc(11rem + 1px);
-
   }
-  section#examples.main-content{
-  padding-top: calc(15rem + 1px);
-
-}
+  section#examples.main-content {
+    padding-top: calc(15rem + 1px);
+  }
   .example-container {
     margin-bottom: -3rem;
   }
@@ -94,9 +103,8 @@ ul.nav-links-list {
   .alpaca-div {
     margin-left: 0rem;
   }
-  #footer{
+  #footer {
     z-index: 100;
-
   }
 }
 
@@ -112,6 +120,9 @@ ul.nav-links-list {
     background-color: 1px solid rgb(128, 22, 22);
   }
 
+  .container.sticky-header{
+    padding-left: 0px;
+  }
   button.toggle-nav:active {
     background-color: 1px solid rgb(128, 22, 22);
   }
@@ -230,15 +241,17 @@ ul.nav-links-list {
   .container {
     margin: auto 0;
   }
-  h1#header-name{
+  .container.sticky-header{
+    padding-left: 0px;
+    
+  }
+
+  h1#header-name {
     position: fixed;
     top: 0rem;
-    font-size: 1rem
+    font-size: 1rem;
   }
   .nav-link-item.resume {
-    background-color: white;
-    color: black;
-
     text-align: center;
     border: none;
   }
@@ -300,8 +313,7 @@ ul.nav-links-list {
   ul.nav-links-list {
     display: flex;
     /* align-content: stretch; */
-    align-items: baseline;
     justify-content: space-between;
-    flex-wrap: wrap;
-  }
+    align-items: baseline;
+    flex-wrap: nowrap;  }
 }
